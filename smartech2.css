@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 238, 255), rgb(17, 179, 243));
+    clip-path: circle(30% at right 90%);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #2ceeee);
+    clip-path: circle(20% at 10% 10%);
+}
+
+.clockcontainer {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.clock {
+    max-width: 20.83vw;
+    max-height: 20.83vw;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(https://i.postimg.cc/BQzDhfcX/clock.png);
+    background-size: cover;
+    border: 5px solid rgb(13, 13, 16);
+    border-radius: 50%;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.03), inset 0 -10px 10px rgba(255, 255, 255, 0.03), 0 10px 10px rgba(0, 0, 0, 0.85), inset 0 10px 10px rgba(0, 0, 0, 0.85);
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    width: 0.89vw;
+    height: 0.89vw;
+    background-color: #002a9c;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour,
+.hr {
+    width: 14.17vw;
+    height: 14.17vw;
+}
+
+.clock .min,
+.mn {
+    width: 14.92vw;
+    height: 14.92vw;
+}
+
+.clock .sec,
+.sc {
+    width: 17.16vw;
+    height: 17.16vw;
+}
+
+.hr,
+.mn,
+.sc {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: "";
+    position: absolute;
+    width: 0.74vw;
+    height: 8.95vw;
+    background-color: rgb(68, 38, 136);
+    clip-path: polygon(50% 0%, 100% 41%, 65% 100%, 39% 100%, 0 41%);
+    z-index: 10;
+}
+
+.mn::before {
+    content: "";
+    position: absolute;
+    width: 0.44vw;
+    height: 10.07vw;
+    background-color: #2ea1ff;
+    box-shadow: 1px 1px 2px #002a9c;
+    clip-path: polygon(50% 0%, 100% 41%, 65% 100%, 39% 100%, 0 41%);
+    z-index: 11;
+}
+
+.sc::before {
+    content: "";
+    position: absolute;
+    width: 0.29vw;
+    height: 11.94vw;
+    background-color: rgb(122, 15, 75);
+    clip-path: polygon(50% 0%, 100% 41%, 65% 100%, 39% 100%, 0 41%);
+    border-radius: 6px 6px 0 0;
+    z-index: 12;
+}
+
+.info {
+    position: absolute;
+    width: 8.2vw;
+    height: 1.33vw;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: rgb(140, 255, 251);
+    font-size: 0.96vw;
+    top: 14.92vw;
+    left: 50%;
+    z-index: -1;
+    letter-spacing: 0.22vw;
+    margin-left: -4.09vw;
+}
+
+.date {
+    top: 4.1vw;
+}
+
+.day {
+    bottom: 1.49vw;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.container .card .content .first .imgBx {
+    position: relative;
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.container .card .content .first .imgBx iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container .card .content h2 {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+#geoprocesamiento {
+    font-size: 1.7em;
+}
+
+.container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+}
+
+.container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 280;
+}
+
+.container .card .content a {
+    position: relative;
+    display: block;
+    justify-content: center;
+    width: 160px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom right, #2af598, #009efd);
+    ;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container .card .content .first {
+    position: relative;
+    top: -100px;
+    left: 0;
+    display: block;
+}
+
+.container .card:hover .content .first {
+    display: none;
+}
+
+.container .card .content .second {
+    display: none;
+}
+
+.container .card:hover .content .second {
+    display: block;
+}

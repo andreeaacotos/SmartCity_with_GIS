@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smartech2</title>
+    <link rel="stylesheet" href="smartech2.css">
+</head>
+
+<body>
+    <div class="clockcontainer">
+        <div class="clock">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+            </div>
+            <div class="info date"></div>
+            <div class="info day"></div>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <div class="first">
+                    <div class="imgBx">
+                        <iframe src="https://alvaro-corchete.maps.arcgis.com/apps/webappviewer/index.html?id=ed60555aea814c5d9436f0bda2a53625
+                        " id="residuosframe">
+                        </iframe>
+
+                    </div>
+                    <div class="contentBx">
+                        <h3>Residuos</h3>
+                    </div>
+                </div>
+
+                <div class="second">
+                    <h2 id="geoprocesamiento">geoprocesamiento</h2>
+                    <h3>Residuos</h3>
+                    <p>Geoprocesamiento sobre las rutas óptimas para la recogida de los contenedores de residuos.
+                        <a href="https://alvaro-corchete.maps.arcgis.com/apps/webappviewer/index.html?id=ed60555aea814c5d9436f0bda2a53625">Acceder</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="content">
+                <div class="first">
+                    <div class="imgBx">
+                        <iframe src="https://www.arcgis.com/apps/dashboards/00fa0424e00347c194f829f2af22a8e3
+                        "></iframe>
+                    </div>
+                    <div class="contentBx">
+                        <h3>Survey 123</h3>
+                    </div>
+                </div>
+
+                <div class="second">
+                    <h2>encuesta</h2>
+                    <h3> Survey 123</h3>
+                    <p>
+                        Mediante ArcGis Survey 123 se muestran los resultados de las sugerencias de los ciudadanos para las futuras obras en la ciudad.
+                        <a href="https://www.arcgis.com/apps/dashboards/00fa0424e00347c194f829f2af22a8e3">Acceder</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="content">
+                <div class="first">
+                    <div class="imgBx">
+                        <iframe src="https://localhost/Urbanismo/"></iframe>
+                    </div>
+                    <div class="contentBx">
+                        <h3> Urbanismo </h3>
+
+                    </div>
+                </div>
+
+                <div class="second">
+                    <h2> urbanismo </h2>
+                    <h3>Urbanismo</h3>
+                    <p>Consulta y edición del estado de la infrastructura urbanística de la ciudad.
+                        <a href="https://localhost/Urbanismo/
+                        ">Acceder </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="smartech2.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+
+</body>
+
+</html>
