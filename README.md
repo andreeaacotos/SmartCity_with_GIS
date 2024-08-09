@@ -1,6 +1,6 @@
 # SmartCity_with_GIS
 ## Proyecto final de Máster- ESRI España 2021
-[![Video](https://img.youtube.com/vi/v=4smcjq73toU/0.jpg)](https://www.youtube.com/watch?v=4smcjq73toU)
+[![Video](https://img.youtube.com/vi/_4smcjq73toU/0.jpg)](https://www.youtube.com/watch?v=4smcjq73toU)
 
 ![Slide1](https://github.com/user-attachments/assets/15759aa1-53b4-4622-9f6f-35cc942322d0)
 ![Slide2](https://github.com/user-attachments/assets/a0ae9b32-89fa-42e0-9850-dcd605ce166e)
